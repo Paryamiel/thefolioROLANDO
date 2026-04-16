@@ -1,0 +1,115 @@
+/* src/pages/Register.css */
+.register-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 30px auto;
+    text-align: left;
+    border: 1px solid #eee;
+}
+
+body.dark .register-container {
+    background: #2a2a2a;
+    border-color: #444;
+    color: #eee;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+body.dark .form-group label {
+    color: #ccc;
+}
+
+input[type="text"], 
+input[type="password"], 
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+body.dark input[type="text"], 
+body.dark input[type="password"], 
+body.dark input[type="date"] {
+    background: #333;
+    border-color: #555;
+    color: white;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Radio & Checkbox Styling */
+.radio-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    font-weight: normal !important;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Error Messaging */
+.error {
+    color: #dc3545;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    display: block;
+    font-weight: 500;
+}
+
+/* Button Styling */
+#regBtn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 10px;
+}
+
+#regBtn:hover {
+    background: #0056b3;
+    transform: translateY(-1px);
+}

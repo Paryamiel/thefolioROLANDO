@@ -1,0 +1,77 @@
+/* src/pages/Splash.css */
+
+/* We use a wrapper class instead of the 'body' tag so it doesn't leak into other pages */
+.splash-wrapper {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #ffffff;
+    position: relative;
+    /* This ensures it covers the header/footer from App.js if they render simultaneously */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+/* Animated Background (Matrix Effect) */
+#bg-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Glassmorphism Loader Card */
+.loader-card {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transition: opacity 0.5s ease;
+    min-width: 300px;
+}
+
+/* Fade out animation class added by JS */
+.loader-card.fade-out {
+    opacity: 0;
+}
+
+.loader-card h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Progress Bar Styling */
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+#progress-fill {
+    height: 100%;
+    background: #ffffff;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+#status {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
