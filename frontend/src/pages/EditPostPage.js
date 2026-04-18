@@ -7,7 +7,7 @@ const EditPostPage = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState(''); // Changed to body
     const [image, setImage] = useState(null);
-    const [ setError] = useState('');
+    const [error, setError] = useState('');
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -33,7 +33,7 @@ const EditPostPage = () => {
 
         try {
             // ✅ Let Axios handle the headers automatically!
-            await API.post('/posts', formData);
+            await API.put(`/posts/${id}`, formData);
             navigate('/home'); 
         } catch (err) {
             // Let's also update this to print the REAL error from your backend:

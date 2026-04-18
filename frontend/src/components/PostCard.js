@@ -11,7 +11,7 @@ const PostCard = ({ post }) => {
             {/* 🟢 Render the image if it exists */}
             {post.image && (
                 <img 
-                    src={`http://localhost:5000/uploads/${post.image}`} 
+                    src={`${process.env.REACT_APP_API_URL?.replace('/api','') || ''}/uploads/${post.image}`}
                     alt={post.title} 
                     style={{ width: '100%', height: '200px', objectFit: 'cover', borderTopLeftRadius: '8px', borderTopRightRadius: '8px' }} 
                 />

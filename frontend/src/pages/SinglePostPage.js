@@ -64,7 +64,7 @@ const SinglePostPage = () => {
             
             {post.image && (
                 <img 
-                    src={`http://localhost:5000/uploads/${post.image}`} 
+                    src={`${process.env.REACT_APP_API_URL?.replace('/api','') || ''}/uploads/${post.image}`}
                     alt={post.title} 
                     style={{ width: '100%', maxHeight: '400px', objectFit: 'cover', marginTop: '20px', borderRadius: '8px' }} 
                 />
